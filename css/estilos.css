@@ -1,0 +1,20 @@
+body{
+    background: url(../img/fondo.jpg);
+    margin:0;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.formulario{
+    margin: auto;
+    background: white;
+    width: 30%;
+    height: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+}

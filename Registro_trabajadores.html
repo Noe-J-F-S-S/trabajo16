@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+</head>
+<body>
+    <center><h1> Registro de trabajadores  </h1></center>
+      
+        <form class="formulario" action="registro.php" method="POST" id="miformulario">
+            <center><table >
+                <tr>
+                    <td>Rut:</td>
+                    <td>
+                        <input type="text" name="rut" id="rut" minlength="11" maxlength="11" placeholder="Sin puntos ni guion" required="" pattern="[1-9]+" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nombre: </td>
+                    <td>
+                        <input type="text" name="nombre" id="nombre" required="" pattern="[a-zA-Z]+" placeholder="Noe">
+                        <div id="info"> </div>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td >Apellido Paterno: </td>
+                    <td>
+                        <input type="text" name="apellidopa" id="apellidopa" required="" pattern="[a-zA-Z]+" placeholder="Sierra">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apellido Materno</td>
+                    <td>
+                        <input type="text" name="apellidoma" id="apellidoma" required="" pattern="[a-zA-Z]+" placeholder="Sotelo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td>
+                        <input type="radio" name="sexo" value="Masculino">Masculino
+                        <input type="radio" name="sexo" value="Femenino">Femenino
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nivel de estudio: </td>
+                    <td>
+                        <input type="checkbox" name="no tiene" id="">No tiene <br>
+                        <input type="checkbox" name="Tecnico" id="">Técnico <br>
+                        <input type="checkbox" name="Universitario" id="">Universitario
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciudad de nacimiento: </td>
+                    <td>
+                        <select name="ciudad" id="ciudad">
+                            <option value="">--Seleccione--</option>
+                            <option value="Lima">Lima</option>
+                            <option value="Ica">Ica</option>
+                            <option value="Arequipa">Arequipa</option>
+                        </select>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Curriculum: </td>
+                    <td><input type="file" name="curriculum" id="curriculum" accept=" .doc,.pdf"></td>
+                </tr>
+                <tr>
+                    <td>Foto: </td>
+                    <td><input type="file" name="foto" id="foto" accept=".jpg,.png"></td>
+                </tr>
+            </table></center>
+
+            <center><p><input type="submit" value="Registrar trabajador"></p></center>
+            
+        </form>
+      
+        
+        <script type="text/javascript">
+            
+            function validarFormuario(){
+                var texto;
+                var nombre=document.getElementById('nombre').value;
+                
+                if (nombre.length<3)
+                {
+                texto="<span style='color:green'> El usuario debe tener 3 caracteres como mínimo </span>";
+                document.getElementById('info').innerHTML=texto;
+                return false;
+                }
+
+            }
+                
+        </script>
+</body>
+</html>
